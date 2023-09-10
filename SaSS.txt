@@ -1,0 +1,94 @@
+==> node install & check with this command:
+
+>> node -v
+>> npm init
+
+==> answers some questions author name should be give;
+
+>> npm i -g sass
+
+==> ekfolder banao " sass " name sy aur us mei ek file add kro " style.scss ";
+
+==> phr " package.json " file mei jao aur add kro es file ka path "test:" '', ke bad add kro;
+
+>> "start": "sass ./sass/style.scss:style.css --watch"
+
+for example
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "my project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass ./sass/style.scss:style.css --watch"
+  },
+  "author": "Ihsaan Chandio",
+  "license": "ISC"
+}
+
+==> open the terminal and type
+
+>> npm start
+
+==> ab " sass " wale folder mei ek or folder banao " include " or us mn files add kro like " variable.scss , global.scss, typography.scss etc "; aur unko import kro " style.scss " mein ' [ @import './include/varibale.scss'; ]' es tarha se sb files;
+
+
+note: jo b enternal links hongi wo style.scss mn import krna style.css mei khud h load hojaengi!
+
+examples for variable.css file; variable define krdo ek bar font, color, ke etc;
+================================================================================
+$font-robo: 'Roboto', sans-serif;
+$font-work: 'Work Sans', sans-serif;
+$font-slab: 'Roboto Slab', serif;
+$color-pri : #232323;
+$color-sec : #343434;
+
+
+examples for global.css file; es mn jo b global cheez krne hy wo krdo; jese button ki design, etc;
+==================================================================================================
+button, button:focus{
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+
+
+examples for typography.css file; es mei apne apne class banao bootstrape ki tarha, font-size, color ke etc;
+aur jo variable banae hein wo assign krdo classes ko bus!
+============================================================================================================
+.font-robo{
+	font-family: $font-robo;
+}
+.font-work{
+	font-family: $font-work;
+}
+.slab{
+	font-family: $font-slab;
+}
+.f-12{
+	font-size:12px;
+}
+.f-14{
+	font-size:14px;
+}
+.f-18{
+	font-size: 18px;
+}
+.f-20{
+	font-size:20px;
+}
+.f-100{
+	font-size:100px;
+}
+
+.color-p{
+	color: $color-pri
+}
+
+.color-s{
+	color: $color-sec
+}
+
+==================================================================================================
+or jo style.css file h usko link zaroor karna apne project mein..... and then enjoy!
